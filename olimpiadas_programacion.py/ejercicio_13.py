@@ -1,5 +1,7 @@
 print("Ejercicio 13: Gestion de compras en supermercado")
 
+#Creamos las listas, e interactuamos con el usuario, pidiendo que agregue a la lista de productos y clientes
+
 clientes = ["Alejandra", "Fernando", "Natalia"]
 clientes.append(input("Ingrese un nombre del cliente: "))
 clientes.append(input("Ingrese un nombre del cliente: "))
@@ -7,6 +9,8 @@ clientes.append(input("Ingrese un nombre del cliente: "))
 productos = ["Arroz", "Leche", "Huevos"]
 productos.append(input("Ingrese un producto: "))
 productos.append(input("Ingrese un producto: "))
+
+#In: Sirve para especificar "en" dentro de un texto
 
 if "Natalia" in clientes:
     clientes.append("Carlos")
@@ -45,6 +49,9 @@ canasta_basica=productos[-2:]
 if "pan" in canasta_basica:
     producto_oferta= ("pan", 2500)
     
+else:
+    print("No se cumple la condicion")
+    
 #Crear diccionario si hay "preferencial"    
     
 if "preferencial" in turno_caja:
@@ -54,6 +61,9 @@ if "preferencial" in turno_caja:
     "total": 3500
     }
 
+else:
+    print("No se encuentra el diccionario")
+    
 #Añadir medio de pago solo si venta existe
 #Equivale a if len(venta)>0
 
@@ -73,6 +83,8 @@ if "Fernando" not in clientes:
     
 else:
     print("No se cumplio la condicion")
+
+#Muestra en las listas  clientes, productos, turno_caja, canasta_basica, cualquier tupla creada y el diccionario venta si fue creado
 
 print(f"Lista clientes{clientes}")
 
