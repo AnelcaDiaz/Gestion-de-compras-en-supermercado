@@ -12,23 +12,30 @@ if "Natalia" in clientes:
     clientes.append("Carlos")
     print(f"La lista es {clientes}")
     
-    if "Huevos" in productos:
+else:
+    print("No se cumplio la condicion")
+
+if "Huevos" in productos:
         productos.append("Pan")
         print(f"La lista actualizada es {productos}")
-    
-        if "Fernando" in clientes:
+else:
+    print("No se cumplio la condicion")
+
+if"Fernando" in clientes:
             clientes.remove("Fernando")
+
+else:
+    print("No se cumplio la condicion")
+
+if len(productos)>3:
+    productos.remove("Arroz")
+    print(f"la lista actualizada es{productos}")
     
     
-            if len(productos)>3:
-                productos.remove("Arroz")
-                print(f"la lista actualizada es{productos}")
-    
-    
-                if "Alejandra" in clientes:
-                    clientes.remove("Alejandra")
-                    clientes.append("Marcela")
-                    print(f"la lista actualizada es {clientes}")
+if "Alejandra" in clientes:
+    clientes.remove("Alejandra")
+    clientes.append("Marcela")
+    print(f"la lista actualizada es {clientes}")
     
     
 turno_caja= clientes[:2]
@@ -40,25 +47,32 @@ if "pan" in canasta_basica:
     
 #Crear diccionario si hay "preferencial"    
     
-    if "preferencial" in turno_caja:
-        venta= {
-        "cliente": "Marcela",
-        "producto": "Leche",
-        "total": 3500
-        }
+if "preferencial" in turno_caja:
+    venta= {
+    "cliente": "Marcela",
+    "producto": "Leche",
+    "total": 3500
+    }
 
-#Añadir medio de pago solo si eventa existe
+#Añadir medio de pago solo si venta existe
 #Equivale a if len(venta)>0
-        if venta:
-            venta["medio_pago"]= "Tarjeta Debito"
 
-        if "Azucar" not in productos:
-                                productos.append("Azucar")
+if "venta" in locals():
+    venta["medio de pago"]= "Tarjeta debito"
+
+else:
+    print("No se cumplio la condicion")
+if "Azucar" not in productos:
+    productos.append("Azucar")
     
+else:
+    print("No se cumplio la condicion")
+
+if "Fernando" not in clientes:
+    clientes.append("Fernando")
     
-                                if "Fernando" not in clientes:
-                                    clientes.append("Fernando")
-    
+else:
+    print("No se cumplio la condicion")
 
 print(f"Lista clientes{clientes}")
 
